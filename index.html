@@ -41,24 +41,93 @@
       یک بگایی در سرور ثبت شده است
     </div>
 
+
+
+
+
+
+
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+</script>
+
     <div class="container">
       <div class="row">
         <div class="col bg-light p-4 border">
-          column
+          <div class="container">
+            <div class="row mt-5 justify-content-center">
+              <label for="ghavam" class="form-label">آدرس ایمیل</label>
+              <select name="selector"
+                      class="form-select"
+                      aria-label="Defualt Select Example"
+                      >
+                  <option selected> لطفا شهر خود را انتخاب کنید </option>
+                  <option value="">فردیس</option>
+                  <option value="">جهان نما</option>
+                  <option value="">آزادگان</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="col bg-light p-4 border">
-          column
+          <!-- input range -->
+          <label for="exmapleRange" class="form-label">Example Range</label>
+          <input type="range" class="form-range" id="exampleRange">
         </div>
+
         <div class="col bg-light p-4 border">
-          column
+          <!-- input groupe -->
+
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input type="checkbox" class="form-check-input mt-0">
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="row">
         <div class="col bg-light p-4 border">
-          کالومن
+          <!-- buton addons -->
+          <div class="input-group mb-3">
+            <div class="btn btn-outline-dark" type="button" id="button-addon1" >دکمه</div>
+            <input type="text" class="form-control" placeholder="متن را وارد کنید" aria-label="example-text">
+          </div>
+
         </div>
         <div class="col bg-light p-4 border">
-          کالومن
+          <!-- floating input -->
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floating-input" placeholder="ایمیل را وارد کنید">
+            <label for="floating-input">ایمیل</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingpassword" placeholder="گذرواژه">
+            <label for="floatingpassword">گذرواژه</label>
+          </div>
+
         </div>
       </div>
     </div>
@@ -215,8 +284,6 @@
         A caption for the Above image. 
       </figcaption>
     </figure>
-
-
     
 
     <!-- Optional JavaScript; choose one of the two! -->
